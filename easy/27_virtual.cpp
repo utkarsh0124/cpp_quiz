@@ -20,3 +20,25 @@ int main() {
   B b;
   std::cout << b;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// runtime polymorphism
