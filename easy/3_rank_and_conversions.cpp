@@ -41,11 +41,27 @@ int main() {
 // 3. Conversion
 
 //PROMOTIONS:
-//C++ considers only these 4 as promotions
-//bool->int 
-//char->int 
-//short->int 
-//float->double
+// C++ has integral promotions (for bool, small integer types, character types, and some enums) and 
+// one floating-point promotion (float -> double). 
+
+// Any integer type whose rank is less than int is promoted to int if int can represent all its values; 
+// otherwise to unsigned int.
+
+// Other implicit type changes are conversions rather than promotions.
+//These are the promotions
+/*
+bool          -> int
+char          -> int (or unsigned int)
+signed char   -> int (or unsigned int)
+unsigned char -> int (or unsigned int)
+short         -> int (or unsigned int)
+unsigned short-> int (or unsigned int)
+wchar_t       -> int/unsigned int/... (implementation-dependent)
+char8_t       -> int/unsigned int/... (since C++20)
+char16_t      -> int/unsigned int/... 
+char32_t      -> int/unsigned int/... 
+enum types    -> int/unsigned int/... (under certain conditions)
+*/
 
 //Anything else is just a conversion, not a promotion.
 
